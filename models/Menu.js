@@ -28,6 +28,6 @@ module.exports = function(sequelize, DataTypes) {
 
 function _associate(models) {
   models.Menu.hasMany(models.Product, {
-    as: 'product'
+    as: 'products'
   });
 }

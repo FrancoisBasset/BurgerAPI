@@ -1,5 +1,4 @@
-const Product = require('../models').Product;
-
+const Product = require('../models/Product');
 const ProductController = function() {};
 
 ProductController.getAll = function() {
@@ -18,17 +17,23 @@ ProductController.add = function(name, price, isAdvertised) {
   });
 };
 
-ProductController.modify = function(id, name, price, isAdvertised) {
-  return Product.update({
+ProductController.modify = function(id, name, price, isAdvertised, promotion) {
+  return Product.findById(id)
+  .then((product) => {
+    product.update({
       name: name,
       price: price,
-      isAdvertised: isAdvertised
+      isAdvertised: isAdvertised,
+      promotion: promotion
     }, {
       where: {
         id: id
       }
-    }
-  );
+    })
+    .then((res) => {
+      return res;
+    });
+  });
 };
 
 ProductController.delete = function(id) {

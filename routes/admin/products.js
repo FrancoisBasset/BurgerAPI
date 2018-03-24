@@ -29,6 +29,11 @@ productRouter.get('/:id', (req, res) => {
 });
 
 productRouter.post('/', (req, res) => {
+  if (req.body.name === undefined || req.body.price === undefined || req.body.isAdvertised === undefined) {
+    res.status(400).end();
+    return;
+  }
+
   ProductController.add(req.body.name, parseFloat(req.body.price), req.body.isAdvertised)
   .then((product) => {
     res.status(201).json(product);
@@ -41,8 +46,9 @@ productRouter.post('/', (req, res) => {
 productRouter.put('/:id', (req, res) => {
   const productId = parseInt(req.params.id);
 
-  ProductController.modify(productId, req.body.name, req.body.price, req.body.isAdvertised)
+  ProductController.modify(productId, req.body.name, req.body.price, req.body.isAdvertised, parseFloat(req.body.promotion))
   .then((product) => {
+    console.log(product);
     res.status(201).end();
   }).catch((err) => {
     res.status(404).end();
