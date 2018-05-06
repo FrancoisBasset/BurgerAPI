@@ -1,9 +1,9 @@
 const express = require('express');
-const RouterManager = function() {};
+const RouterManager = {};
 
 RouterManager.attach = (app) => {
-  app.use('/admin', require('./admin'));
-  app.use('/customer', require('./customer'));
+    app.use('/admin', require('./admin'));
+    app.use('/customer', require('./customer'));
 };
 
 module.exports = RouterManager;

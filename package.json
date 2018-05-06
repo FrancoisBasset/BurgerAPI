@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodejs index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node-dev index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sonar": "sonar-scanner -Dsonar.projectKey=burgerapi -Dsonar.organization=comic-team -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=180d9bfe8571f657a3c3147aa4d14915f4f3b40c"
   },
   "author": "",
   "license": "ISC",

@@ -1,33 +1,38 @@
-module.exports = function(sequelize, DataTypes) {
-  const Menu = sequelize.define('Menu', {
-    id: {
-      type: DataTypes.BIGINT,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    name: {
-      type: DataTypes.STRING
-    },
-    price: {
-      type: DataTypes.DOUBLE
-    },
-    isAdvertised: {
-      type: DataTypes.BOOLEAN
-    },
-    promotion: {
-      type: DataTypes.DOUBLE
-    }
-  }, {
-    paranoid: false,
-    underscored: false,
-    freezeTableName: true
-  });
+module.exports = (sequelize, DataTypes) => {
+    const Menu = sequelize.define('Menu', {
+        id: {
+            type: DataTypes.BIGINT,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        price: {
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        },
+        isAdvertised: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        promotion: {
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        }
+    }, {
+        paranoid: false,
+        underscored: false,
+        freezeTableName: true
+    });
 
-  return Menu;
+    Menu.associate = _associate;
+    return Menu;
 };
 
-function _associate(models) {
-  models.Menu.hasMany(models.Product, {
-    as: 'products'
-  });
+_associate = (models) => {
+    models.Menu.hasMany(models.Product, {
+        as: 'Products'
+    });
 }

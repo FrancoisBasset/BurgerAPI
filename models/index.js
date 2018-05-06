@@ -8,7 +8,7 @@ const basename = path.basename(module.filename);
 
 const ModelIndex = {};
 
-ModelIndex.getModel = function (modelName) {
+ModelIndex.getModel = (modelName) => {
   return this[modelName];
 };
 
@@ -37,7 +37,7 @@ Object.keys(ModelIndex)
 
 ModelIndex.sequelize = sequelize;
 ModelIndex.Sequelize = Sequelize;
-ModelIndex.openDatabase = function() {
+ModelIndex.openDatabase = () => {
   return sequelize
       .authenticate()
       .then(() => sequelize.sync({
