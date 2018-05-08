@@ -5,6 +5,10 @@ const ProductController = require('../controllers/ProductController');
 const MenuController = require('../controllers/MenuController');
 const CommandController = {};
 
+CommandController.findAll = () => {
+    return Command.findAll();
+};
+
 CommandController.commandProduct = (product, quantity) => {
     return Customer.create()
         .then((customer) => {

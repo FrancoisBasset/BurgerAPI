@@ -42,5 +42,6 @@ adminRouter.use('/products', require('./products'));
 adminRouter.use('/menus', require('./menus'));
 adminRouter.use('/promotions', require('./promotions'));
 adminRouter.use('/advertises', require('./advertises'));
+adminRouter.use('/commands', require('./commands'));
 
 module.exports = adminRouter;

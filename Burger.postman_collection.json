@@ -472,6 +472,24 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "Command",
+					"description": "",
+					"item": [
+						{
+							"name": "/admin/commands",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/commands",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "/admin/authenticate",
 					"request": {
 						"url": "127.0.0.1:3000/admin/authenticate",
