@@ -52,7 +52,7 @@ MenuController.getProducts = (menu) => {
             MenuId: menu
         }
     });
-}
+};
 
 MenuController.update = (id, name, price, isAdvertised, promotion) => {
     return Menu.findById(id)

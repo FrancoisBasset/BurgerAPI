@@ -58,6 +58,6 @@ PromotionController.deleteProduct = (product) => {
                 promotion: require('../models').Sequelize.col('price')
             });
         });
-}
+};
 
 module.exports = PromotionController;

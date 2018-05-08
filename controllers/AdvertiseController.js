@@ -26,7 +26,7 @@ AdvertiseController.advertiseMenu = (menu) => {
                 isAdvertised: true
             });
         });
-}
+};
 
 AdvertiseController.advertiseProduct = (product) => {
     return Product.findById(product)
