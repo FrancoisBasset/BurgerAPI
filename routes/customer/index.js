@@ -7,6 +7,6 @@ customerRouter.use(bodyParser.json());
 customerRouter.use('/menus', require('./menus'));
 customerRouter.use('/products', require('./products'));
 customerRouter.use('/promotions', require('./promotions'));
-/*customerRouter.use('/command', require('./command'));*/
+customerRouter.use('/command', require('./command'));
 
 module.exports = customerRouter;

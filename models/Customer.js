@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     return Customer;
 };
 
-_associate = (models) => {
+const _associate = (models) => {
     models.Customer.hasMany(models.Command, {
         as: 'commands'
     });

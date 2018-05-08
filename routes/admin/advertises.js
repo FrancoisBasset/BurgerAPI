@@ -3,6 +3,9 @@ const advertiseRouter = express.Router();
 
 const AdvertiseController = require('../../controllers/AdvertiseController');
 
+const myLogger = require('../../Logger');
+advertiseRouter.use(myLogger);
+
 advertiseRouter.get('/menus', (req, res) => {
     AdvertiseController.findMenus()
         .then((menus) => {

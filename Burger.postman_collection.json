@@ -1,0 +1,508 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Burger",
+		"_postman_id": "b0a5336f-9542-a5e6-6e65-eb3028747a8b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"description": "",
+			"item": [
+				{
+					"name": "/customer/menus",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/menus",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/menus/bestseller",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/menus/bestseller",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/promotions/menus",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/promotions/menus",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/products",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/products",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/products/bestseller",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/products/bestseller",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/promotions/products",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/promotions/products",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/command/products",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/command/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product\": 1,\n\t\"quantity\": 5\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/command/menus",
+					"request": {
+						"url": "http://127.0.0.1:3000/customer/command/menus",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"menu\": 1,\n\t\"quantity\": 10\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"description": "",
+			"item": [
+				{
+					"name": "Product",
+					"description": "",
+					"item": [
+						{
+							"name": "/admin/products",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/products",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/products/:id",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/products/1",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/products",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/products",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Tacos XL\",\n\t\"price\": 9,\n\t\"isAdvertised\": false,\n\t\"promotion\": 9\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/products",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/products/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Tacos Giga\",\n\t\"price\": 20,\n\t\"isAdvertised\": false,\n\t\"promotion\": 0\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/products/:id",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/products/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Menu",
+					"description": "",
+					"item": [
+						{
+							"name": "/admin/menus",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/:id",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/1",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Menu étudiant\",\n\t\"price\": 4,\n\t\"isAdvertised\": false,\n\t\"promotion\": 4\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/:id",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Menu gastronomique\",\n\t\"price\": 100,\n\t\"isAdvertised\": false,\n\t\"promotion\": 0\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/:id",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/1",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/products/:menu",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/products/1",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/products/:menu/:product",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/products/1/1",
+								"method": "PUT",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/menus/products/:product",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/menus/products/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Promotion",
+					"description": "",
+					"item": [
+						{
+							"name": "/admin/promotions/menus",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/menus",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/promotions/menus/:menu/:promotion",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/menus/1/2",
+								"method": "PUT",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/promotions/menus/:menu",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/menus/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/promotions/products",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/products",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/promotions/products/:product/:promotion",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/products/1/1",
+								"method": "PUT",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/promotions/products/:product",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/promotions/products/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Advertise",
+					"description": "",
+					"item": [
+						{
+							"name": "/admin/advertises/menus",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/menus",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/advertises/menus/:menu",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/menus/1",
+								"method": "PUT",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/advertises/menus/:menu",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/menus/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/advertises/products",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/products",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/advertises/products/:product",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/products/1",
+								"method": "PUT",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/admin/advertises/products/:product",
+							"request": {
+								"url": "http://127.0.0.1:3000/admin/advertises/products/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/admin/authenticate",
+					"request": {
+						"url": "127.0.0.1:3000/admin/authenticate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pass\": \"pass\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/admin/disconnect",
+					"request": {
+						"url": "127.0.0.1:3000/admin/disconnect",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

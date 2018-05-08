@@ -31,6 +31,6 @@ module.exports = (sequelize, DataTypes) => {
     return Product;
 };
 
-_associate = (models) => {
+const _associate = (models) => {
     models.Product.belongsTo(models.Menu);
 }

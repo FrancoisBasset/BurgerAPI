@@ -3,6 +3,9 @@ const promotionRouter = express.Router();
 
 const PromotionController = require('../../controllers/PromotionController');
 
+const myLogger = require('../../Logger');
+promotionRouter.use(myLogger);
+
 promotionRouter.get('/menus', (req, res) => {
     PromotionController.findMenus()
         .then((menus) => {

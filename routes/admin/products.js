@@ -2,6 +2,9 @@ const express = require('express');
 const productRouter = express.Router();
 const ProductController = require('../../controllers/ProductController');
 
+const myLogger = require('../../Logger');
+productRouter.use(myLogger);
+
 productRouter.get('/', (req, res) => {
     ProductController.findAll()
         .then((products) => {

@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     return Command;
 };
 
-_associate = (models) => {
+const _associate = (models) => {
     models.Command.belongsTo(models.Customer);
     models.Command.belongsTo(models.Product);
     models.Command.belongsTo(models.Menu);

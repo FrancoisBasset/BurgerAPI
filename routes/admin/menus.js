@@ -2,6 +2,9 @@ const express = require('express');
 const menuRouter = express.Router();
 const MenuController = require('../../controllers/MenuController');
 
+const myLogger = require('../../Logger');
+menuRouter.use(myLogger);
+
 menuRouter.get('/', (req, res) => {
     MenuController.findAll()
         .then((menus) => {

@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     return Menu;
 };
 
-_associate = (models) => {
+const _associate = (models) => {
     models.Menu.hasMany(models.Product, {
         as: 'Products'
     });
